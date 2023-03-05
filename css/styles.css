@@ -8,6 +8,7 @@
 	--color-text: #434455;
 	--text-white: #f4f4fd;
 	--color-border: #e7e9fc;
+	--color-hover: #404bbf;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
 .header {
 	background-color: var(--color-white);
 	border-bottom: 1px solid var(--color-border);
+	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -144,6 +146,10 @@ body {
 
 .hero {
 	background-color: var(--color-background);
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+	max-width: 1440px;
+	background-repeat: no-repeat;
+	background-size: cover;
 	padding: 200px 0;
 	text-align: center;
 }
@@ -172,6 +178,12 @@ body {
 	cursor: pointer;
 	font-family: Roboto, sans-serif;
 	border-radius: 4px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+	background-color: var(--color-hover);
 }
 
 .main-list {
@@ -180,6 +192,22 @@ body {
 }
 
 .main-item {
+}
+
+.main-discription {
+	display: flex;
+	background-color: var(--text-white);
+	border-radius: 4px;
+	margin-bottom: 8px;
+	justify-content: center;
+	align-items: center;
+	width: 264px;
+	height: 112px;
+}
+
+.main-icon {
+	width: 64px;
+	height: 64px;
 }
 
 .main-item-subtitle {
@@ -277,10 +305,83 @@ img {
 	text-align: center;
 }
 
+.team-social-list {
+	display: flex;
+	justify-content: center;
+	margin-top: 8px;
+	gap: 16px;
+}
+
+.team__social-link {
+	background-color: var(--color-logo);
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.team__social-link:hover,
+.team__social-link:focus {
+	background-color: var(--color-hover);
+}
+
+.team__icon {
+	width: 16px;
+	height: 16px;
+}
+
+.customers {
+}
+
+.customers-title {
+	font-size: 36px;
+	line-height: 1.11;
+	text-align: center;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	color: var(--color-background);
+	margin-bottom: 72px;
+}
+
+.customers-list {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+
+.customers-list-item {
+	display: flex;
+	border: 1px solid #8e8f99;
+	border-radius: 4px;
+	padding: 16px 32px;
+}
+
+.customers-list-item:hover,
+.customers-list-item:focus {
+	border: 1px solid var(--color-hover);
+}
+
+.customers-logo {
+	width: 104px;
+	height: 56px;
+	fill: #8e8f99;
+}
+
+.customers-logo:hover,
+.customers-logo:focus {
+	fill: var(--color-hover);
+}
+
 .footer {
 	background-color: var(--color-background);
 	height: 310px;
-	padding-top: 100px;
+	padding: 100px 0;
+}
+
+.footer-content {
+	display: flex;
 }
 
 .footer__logo {
@@ -311,6 +412,44 @@ img {
 	color: var(--color-border);
 	width: 264px;
 	margin-top: 16px;
+}
+
+.footer-discription {
+	margin-left: 120px;
+}
+
+.footer-title {
+	font-weight: 500;
+	font-size: var(--text-small);
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--color-white);
+}
+
+.footer-list {
+	display: flex;
+	margin-top: 16px;
+	gap: 16px;
+}
+
+.footer-link {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+	background-color: #31d0aa;
+}
+
+.footer-icon {
+	width: 16px;
+	height: 16px;
 }
 
 .filters {
@@ -362,19 +501,20 @@ img {
 .portfolio-link {
 	display: block;
 	cursor: pointer;
+	text-decoration: none;
+}
+
+.portfolio-link:hover .portfolio-item-description,
+.portfolio-link:focus .portfolio-item-description {
+	border: 1px solid var(--text-white);
+	border-top: none;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-description {
 	border: 1px solid var(--color-border);
 	border-top: none;
 	padding: 32px 16px;
-}
-
-.portfolio-item-description:hover,
-.portfolio-item-description:focus {
-	border: 1px solid var(--text-white);
-	border-top: none;
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-img {
